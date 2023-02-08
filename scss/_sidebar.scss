@@ -1,0 +1,62 @@
+@use 'variables/colors';
+@use 'responsive';
+
+.sidebar {
+    width: 30%;
+    background-color: colors.$white;
+    padding: 45px 40px 40px;
+    position: sticky;
+    top: 20px;
+
+    @include responsive.xxl {
+      width: 40%;
+    }
+
+    @include responsive.lg {
+      width: 100%;
+      position: static;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 16px;
+    }
+
+    .filter-element {
+      width: 100%;
+      margin-bottom: 15px;
+
+      .filter-element-label {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .filter-element-select {
+        width: 100%;
+        background-color: colors.$light-grey;
+        min-width: 170px;
+        border-radius: 20px;
+        padding: 13px 20px 11px;
+        margin-right: 0;
+        font-size: 10px;
+        display: block;
+        border-color: colors.$light-grey;;
+      }
+    }
+
+    .sidebar-button {
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 10px;
+      color: colors.$light-blue;
+      background-color: transparent;
+      border: 1px solid colors.$light-blue;
+      ;
+      padding: 13px 30px 11px;
+      min-width: 170px;
+      border-radius: 20px;
+    }
+  }

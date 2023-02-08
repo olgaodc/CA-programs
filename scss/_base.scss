@@ -1,0 +1,48 @@
+@use 'variables/colors';
+@use 'responsive';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: colors.$light-grey;
+  margin: 0;
+}
+
+.container {
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+
+    @include responsive.s {
+        padding: 15px;
+      }
+  
+    .title {
+      font-size: 72px;
+  
+      @include responsive.md {
+        font-size: 55px;
+      }
+  
+      @include responsive.xs {
+        font-size: 40px;
+      }
+    }
+  
+    .container-wrapper {
+      display: flex;
+      align-items: start;
+      column-gap: 30px;
+  
+      @include responsive.lg {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+  

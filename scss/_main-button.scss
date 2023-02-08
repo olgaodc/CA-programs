@@ -1,0 +1,102 @@
+@use 'variables/colors';
+@use 'responsive';
+
+.main-button {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 30px;
+
+    background-color: colors.$white;
+    background-image: url(banner.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 80% 85%;
+
+    @include responsive.xl {
+      padding-bottom: 180px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: flex-start;
+      background-size: 70%;
+      background-position: bottom right;
+    }
+
+    @include responsive.md {
+      padding-bottom: 110px;
+    }
+
+    @include responsive.s {
+      padding: 30px 30px 50px;
+    }
+
+    @include responsive.xs {
+      padding: 20px 20px 50px;
+    }
+
+    .link-text-wrapper {
+      @include responsive.xl {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
+      }
+
+      @include responsive.md {
+        row-gap: 10px;
+      }
+
+      .pink-color {
+        color: colors.$pink;
+
+        @include responsive.xl {
+          font-size: 40px;
+        }
+
+        @include responsive.md {
+          font-size: 24px;
+        }
+
+        @include responsive.xs {
+          font-size: 18px;
+        }
+      }
+  
+      .black-color {
+        color: black;
+
+        @include responsive.xl {
+          font-size: 40px;
+        }
+
+        @include responsive.md {
+          font-size: 24px;
+        }
+
+        @include responsive.xs {
+          font-size: 18px;
+        }
+      }
+    }
+
+    svg {
+      fill: colors.$blue;
+      transform: scale(1.5);
+
+      @include responsive.xl {
+        transform: scale(2.5);
+      }
+
+      @include responsive.md {
+        transform: scale(1.5);
+      }
+
+      @include responsive.xs {
+        transform: scale(1);
+      }
+    }
+  }
